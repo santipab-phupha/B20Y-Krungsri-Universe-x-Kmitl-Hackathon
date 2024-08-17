@@ -101,15 +101,6 @@ def predict_class(df, model):
 def play_audio(filename):
     st.audio(filename)
 
-def list_audio_devices():
-    audio = pyaudio.PyAudio()
-    for i in range(audio.get_device_count()):
-        device_info = audio.get_device_info_by_index(i)
-    audio.terminate()
-
-list_audio_devices()
-
-
 # Streamlit interface
 st.title("🎙️ Baby Cry Identification 👶")
 
