@@ -1,3 +1,4 @@
+--upgrade pip
 pyaudio
 wavefile
 librosa
