@@ -1,5 +1,1 @@
 streamlit
-librosa
-tempfile
-streamlit
-tensorflow
