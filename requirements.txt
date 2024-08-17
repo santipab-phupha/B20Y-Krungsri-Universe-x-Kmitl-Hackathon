@@ -1,5 +1,4 @@
 python==3.7
-pip=>24.2
 streamlit
 pyaudio
 wavefile
