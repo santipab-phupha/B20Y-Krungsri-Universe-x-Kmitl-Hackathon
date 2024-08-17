@@ -1,5 +1,5 @@
-import wave
 import pyaudio
+import wave
 import librosa
 import pandas as pd
 import tempfile
@@ -8,8 +8,8 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 import numpy as np
 
-model = load_model('./lstm_model.h5')
-model_f = load_model('./lstm_model_filter.h5')
+model = load_model('lstm_model.h5')
+model_f = load_model('lstm_model_filter.h5')
 # Function to record audio with circular progress
 def record_audio_with_progress(filename, duration=5, channels=1, rate=44100, chunk=1024):
     audio = pyaudio.PyAudio()
@@ -17,7 +17,9 @@ def record_audio_with_progress(filename, duration=5, channels=1, rate=44100, chu
     # Start recording
     stream = audio.open(format=pyaudio.paInt16, channels=channels,
                         rate=rate, input=True,
+                        input_device_index=0,  # Change this index to the correct one
                         frames_per_buffer=chunk)
+
     frames = []
 
     progress_circle = st.empty()
@@ -98,6 +100,15 @@ def predict_class(df, model):
 # Function to play audio
 def play_audio(filename):
     st.audio(filename)
+
+def list_audio_devices():
+    audio = pyaudio.PyAudio()
+    for i in range(audio.get_device_count()):
+        device_info = audio.get_device_info_by_index(i)
+    audio.terminate()
+
+list_audio_devices()
+
 
 # Streamlit interface
 st.title("🎙️ Baby Cry Identification 👶")
