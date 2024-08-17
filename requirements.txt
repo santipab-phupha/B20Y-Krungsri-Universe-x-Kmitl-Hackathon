@@ -1,8 +1,5 @@
 streamlit
 librosa
-pandas
 tempfile
-time
 streamlit
 tensorflow
-numpy
