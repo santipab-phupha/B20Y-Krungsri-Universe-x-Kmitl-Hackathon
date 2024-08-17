@@ -1,5 +1,5 @@
-import pyaudio
 import wave
+import pyaudio
 import librosa
 import pandas as pd
 import tempfile
