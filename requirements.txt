@@ -1,5 +1,5 @@
 streamlit
-python==3.7.3rc1
+python=>3.7.3rc1
 wave
 pyaudio==0.2.11
 librosa
