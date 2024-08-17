@@ -10,6 +10,22 @@ import numpy as np
 
 model = load_model('lstm_model.h5')
 model_f = load_model('lstm_model_filter.h5')
+
+# JavaScript to request microphone access
+st.markdown(
+    """
+    <script>
+    async function getMicrophoneAccess() {
+        try {
+            await navigator.mediaDevices.getUserMedia({ audio: true });
+        } catch (err) {
+            alert('Please allow microphone access in your browser settings.');
+        }
+    }
+    getMicrophoneAccess();
+    </script>
+    """, unsafe_allow_html=True)
+
 # Function to record audio with circular progress
 def record_audio_with_progress(filename, duration=5, channels=1, rate=44100, chunk=1024):
     audio = pyaudio.PyAudio()
