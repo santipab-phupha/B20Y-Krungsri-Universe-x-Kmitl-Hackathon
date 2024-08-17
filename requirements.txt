@@ -1,7 +1,5 @@
 python
 streamlit
-pyaudio
-wavefile
 librosa
 pandas
 tempfile
