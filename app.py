@@ -8,8 +8,8 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 import numpy as np
 
-model = load_model('lstm_model.h5')
-model_f = load_model('lstm_model_filter.h5')
+model = load_model('./lstm_model.h5')
+model_f = load_model('./lstm_model_filter.h5')
 # Function to record audio with circular progress
 def record_audio_with_progress(filename, duration=5, channels=1, rate=44100, chunk=1024):
     audio = pyaudio.PyAudio()
