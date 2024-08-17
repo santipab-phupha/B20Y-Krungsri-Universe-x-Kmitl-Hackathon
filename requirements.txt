@@ -1,3 +1,4 @@
+streamlit
 pip>=24.2
 pyaudio
 wavefile
