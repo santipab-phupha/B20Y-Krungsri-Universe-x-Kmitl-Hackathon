@@ -3,6 +3,5 @@ wave
 pyaudio
 librosa
 pandas
-streamlit
 tensorflow==2.17.0
 numpy
