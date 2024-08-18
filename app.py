@@ -56,7 +56,7 @@ if uploaded_file is not None:
                 </div>
                 """, unsafe_allow_html=True
             )
-            st.write("ลูกจะร้องไห้สั้น ๆ ดูดปากดูดมือให้ลูกกินนมทุก 2 - 3 ชั่วโมงในทารกแรกเกิด...")
+            st.write("ลูกจะร้องไห้สั้น ๆ ดูดปากดูดมือให้ลูกกินนมทุก 2 - 3 ชั่วโมงในทารกแรกเกิด ซึ่งถ้าลูกหิวมากก็จะร้องไห้โวยวาย ดังนั้นคุณแม่อย่าปล่อยลูกหิวมากจนเกินไปนะ")
         elif predicted_class == 'tired':
             st.markdown(
                 """
@@ -65,7 +65,7 @@ if uploaded_file is not None:
                 </div>
                 """, unsafe_allow_html=True
             )
-            st.write("หยุดการเล่น และพาลูกออกจากสถาณการณ์หรือสถานที่แห่งนั้น...")
+            st.write("หยุดการเล่น และพาลูกออกจากสถาณการณ์หรือแสถานที่แห่งนั้น ปลอบโอ๋ให้หยุด")
         elif predicted_class == 'burping':
             st.markdown(
                 """
@@ -74,7 +74,7 @@ if uploaded_file is not None:
                 </div>
                 """, unsafe_allow_html=True
             )
-            st.write("จับลูกเรอระหว่างกินนมและหลังกินนม ทามหาหิงค์...")
+            st.write("จับลูกเรอระหว่างกินนมและหลังกินนม ทามหาหิงค์ ถ้าเป็นคุณแม่ที่ให้นมลูกหลีกเลี่ยงอาหารที่ทำให้ลูกมีลมในท้อง เช่นประเภทถั่ว ถ้าลูกกินนมผงก็เลือกเป็นสูตรที่ย่อยง่าย")
         elif predicted_class == 'belly_pain':
             st.markdown(
                 """
@@ -83,7 +83,7 @@ if uploaded_file is not None:
                 </div>
                 """, unsafe_allow_html=True
             )
-            st.write("ถ้ามีไข้ อาเจียน ถ่ายเหลว กระสับกระส่าย...")
+            st.write("ถ้ามีไข้ อาเจียน ถ่ายเหลว กระสับกระส่าย กินนมน้อยลง ร้องไห้งอแง กรณีนี้พาลูกหาหมอ")
         elif predicted_class == 'discomfort':
             st.markdown(
                 """
@@ -92,7 +92,7 @@ if uploaded_file is not None:
                 </div>
                 """, unsafe_allow_html=True
             )
-            st.write("สังเกตุอาการตัวร้อนไหม หรือมีความผิดปกติตามร่างกาย...")
+            st.write("สังเกตุอาการตัวร้อนไหม หรือมีความผิดปกติตามร่างกาย ให้รีบพาไปหาหมอ")
     else:
         st.markdown(
             """
